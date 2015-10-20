@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
+		C365CA7E1BD6911D0013D474 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */; settings = {ASSET_TAGS = (); }; };
+		C365CA821BD6A1920013D474 /* CSAClass-ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */; settings = {ASSET_TAGS = (); }; };
 		D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A7E1BD67D360009B845 /* AppDelegate.swift */; };
 		D6D16A811BD67D360009B845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A801BD67D360009B845 /* ViewController.swift */; };
 		D6D16A841BD67D360009B845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A821BD67D360009B845 /* Main.storyboard */; };
@@ -37,6 +39,11 @@
 /* Begin PBXFileReference section */
 		0C5BB7932FA9DA3321E9A52B /* Pods-UBar-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBar-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBar-Swift/Pods-UBar-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		C365CA7F1BD6A1920013D474 /* UBar-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBar-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		C365CA801BD6A1920013D474 /* CSAClass-ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CSAClass-ObjC.h"; sourceTree = "<group>"; };
+		C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSAClass-ObjC.m"; sourceTree = "<group>"; };
+		C365CA841BD6A73C0013D474 /* HTTPStatusCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCodes.h; sourceTree = "<group>"; };
 		D6D16A7B1BD67D360009B845 /* UBar-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UBar-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A7E1BD67D360009B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D16A801BD67D360009B845 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +103,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C365CA7C1BD6905A0013D474 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C365CA831BD6A72C0013D474 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C365CA841BD6A73C0013D474 /* HTTPStatusCodes.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		D6D16A721BD67D360009B845 = {
 			isa = PBXGroup;
 			children = (
@@ -122,11 +145,16 @@
 			isa = PBXGroup;
 			children = (
 				D6D16A7E1BD67D360009B845 /* AppDelegate.swift */,
+				C365CA801BD6A1920013D474 /* CSAClass-ObjC.h */,
+				C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */,
+				C365CA831BD6A72C0013D474 /* Constants */,
+				C365CA7C1BD6905A0013D474 /* Managers */,
 				D6D16A801BD67D360009B845 /* ViewController.swift */,
 				D6D16A821BD67D360009B845 /* Main.storyboard */,
 				D6D16A851BD67D360009B845 /* Assets.xcassets */,
 				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
 				D6D16A8A1BD67D360009B845 /* Info.plist */,
+				C365CA7F1BD6A1920013D474 /* UBar-Swift-Bridging-Header.h */,
 			);
 			path = "UBar-Swift";
 			sourceTree = "<group>";
@@ -214,6 +242,7 @@
 		D6D16A731BD67D360009B845 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bettina Hegedus";
 				TargetAttributes = {
@@ -330,7 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C365CA7E1BD6911D0013D474 /* NetworkingManager.swift in Sources */,
 				D6D16A811BD67D360009B845 /* ViewController.swift in Sources */,
+				C365CA821BD6A1920013D474 /* CSAClass-ObjC.m in Sources */,
 				D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,10 +503,13 @@
 			baseConfigurationReference = 0C5BB7932FA9DA3321E9A52B /* Pods-UBar-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "UBar-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingSans.UBar-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UBar-Swift/UBar-Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -484,10 +518,12 @@
 			baseConfigurationReference = F5AC50D78B6060FE6B805A73 /* Pods-UBar-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "UBar-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingSans.UBar-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UBar-Swift/UBar-Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
