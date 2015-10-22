@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
+		D6852F571BD7B62900ADE3A3 /* CSAPubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6852F561BD7B62900ADE3A3 /* CSAPubsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A7E1BD67D360009B845 /* AppDelegate.swift */; };
 		D6D16A811BD67D360009B845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A801BD67D360009B845 /* ViewController.swift */; };
 		D6D16A841BD67D360009B845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A821BD67D360009B845 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		D6D16A891BD67D360009B845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */; };
 		D6D16A941BD67D360009B845 /* UBar_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A931BD67D360009B845 /* UBar_SwiftTests.swift */; };
 		D6D16A9F1BD67D360009B845 /* UBar_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A9E1BD67D360009B845 /* UBar_SwiftUITests.swift */; };
+		D6D83C141BD908C400F84A1B /* CSAPubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D83C131BD908C400F84A1B /* CSAPubs.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* Begin PBXFileReference section */
 		0C5BB7932FA9DA3321E9A52B /* Pods-UBar-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBar-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBar-Swift/Pods-UBar-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6852F561BD7B62900ADE3A3 /* CSAPubsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAPubsTableViewController.swift; sourceTree = "<group>"; };
 		D6D16A7B1BD67D360009B845 /* UBar-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UBar-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A7E1BD67D360009B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D16A801BD67D360009B845 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		D6D16A9A1BD67D360009B845 /* UBar-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UBar-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A9E1BD67D360009B845 /* UBar_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBar_SwiftUITests.swift; sourceTree = "<group>"; };
 		D6D16AA01BD67D360009B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6D83C131BD908C400F84A1B /* CSAPubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSAPubs.swift; sourceTree = "<group>"; };
 		F5AC50D78B6060FE6B805A73 /* Pods-UBar-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBar-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBar-Swift/Pods-UBar-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 				D6D16A851BD67D360009B845 /* Assets.xcassets */,
 				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
 				D6D16A8A1BD67D360009B845 /* Info.plist */,
+				D6852F561BD7B62900ADE3A3 /* CSAPubsTableViewController.swift */,
+				D6D83C131BD908C400F84A1B /* CSAPubs.swift */,
 			);
 			path = "UBar-Swift";
 			sourceTree = "<group>";
@@ -331,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D16A811BD67D360009B845 /* ViewController.swift in Sources */,
+				D6D83C141BD908C400F84A1B /* CSAPubs.swift in Sources */,
+				D6852F571BD7B62900ADE3A3 /* CSAPubsTableViewController.swift in Sources */,
 				D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
