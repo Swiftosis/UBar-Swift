@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1474BE2D1BDE858400F63349 /* CSAMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */; };
+		1474BE311BDE87FF00F63349 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE301BDE87FF00F63349 /* MapViewController.swift */; };
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
 		D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A7E1BD67D360009B845 /* AppDelegate.swift */; };
 		D6D16A811BD67D360009B845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A801BD67D360009B845 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		0C5BB7932FA9DA3321E9A52B /* Pods-UBar-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBar-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBar-Swift/Pods-UBar-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CSAMapViewController.storyboard; sourceTree = "<group>"; };
+		1474BE301BDE87FF00F63349 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A7B1BD67D360009B845 /* UBar-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UBar-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A7E1BD67D360009B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1474BE2E1BDE859100F63349 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6D16A821BD67D360009B845 /* Main.storyboard */,
+				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
+				1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1474BE2F1BDE85B700F63349 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6D16A8A1BD67D360009B845 /* Info.plist */,
+				D6D16A851BD67D360009B845 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1474BE321BDE895000F63349 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1474BE301BDE87FF00F63349 /* MapViewController.swift */,
+				D6D16A801BD67D360009B845 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		6AF8E0E263859ABAD2132814 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,11 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				D6D16A7E1BD67D360009B845 /* AppDelegate.swift */,
-				D6D16A801BD67D360009B845 /* ViewController.swift */,
-				D6D16A821BD67D360009B845 /* Main.storyboard */,
-				D6D16A851BD67D360009B845 /* Assets.xcassets */,
-				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
-				D6D16A8A1BD67D360009B845 /* Info.plist */,
+				1474BE321BDE895000F63349 /* Controllers */,
+				1474BE2E1BDE859100F63349 /* Views */,
+				1474BE2F1BDE85B700F63349 /* Resources */,
 			);
 			path = "UBar-Swift";
 			sourceTree = "<group>";
@@ -257,6 +287,7 @@
 			files = (
 				D6D16A891BD67D360009B845 /* LaunchScreen.storyboard in Resources */,
 				D6D16A861BD67D360009B845 /* Assets.xcassets in Resources */,
+				1474BE2D1BDE858400F63349 /* CSAMapViewController.storyboard in Resources */,
 				D6D16A841BD67D360009B845 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D16A811BD67D360009B845 /* ViewController.swift in Sources */,
+				1474BE311BDE87FF00F63349 /* MapViewController.swift in Sources */,
 				D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
