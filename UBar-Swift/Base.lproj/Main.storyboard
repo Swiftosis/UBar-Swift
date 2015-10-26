@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hKg-bE-lpp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hKg-bE-lpp">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="637" y="-318"/>
         </scene>
-        <!--View Controller-->
+        <!--Pub Detail View Controller-->
         <scene sceneID="QqS-Gp-CpB">
             <objects>
-                <viewController id="TI4-6h-TWj" sceneMemberID="viewController">
+                <viewController id="TI4-6h-TWj" customClass="PubDetailViewController" customModule="UBar_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9M1-9Q-5UT"/>
                         <viewControllerLayoutGuide type="bottom" id="OF2-q8-uJw"/>
@@ -83,6 +83,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="asd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjB-lh-lxN">
+                                <rect key="frame" x="108" y="177" width="75" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.19607843137254902" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -95,10 +101,13 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pubNameLabel" destination="KjB-lh-lxN" id="cdg-nR-HYG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nf6-y4-isQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069" y="-318"/>
+            <point key="canvasLocation" x="1067" y="-318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uLC-vP-J2N">

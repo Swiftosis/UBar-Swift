@@ -8,13 +8,14 @@
 
 import UIKit
 
+
 class CSAPubsTableViewController: UITableViewController {
     
    
     
     let pubs=[ CSAPubs(name: "Szimpla", city: "BP", street: "nemtom", number: 1, imageName: "szimpl"),
         CSAPubs(name: "Bagoly", city: "Karakóalsószörcsöge", street: "kaka", number: 12, imageName: "bagoly")]
-        
+    
     
 
     override func viewDidLoad() {
@@ -25,12 +26,9 @@ class CSAPubsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
     
-    func imageFor(imageName:String)->UIImage? {
-        
-        return UIImage(named: imageName)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,7 +62,8 @@ class CSAPubsTableViewController: UITableViewController {
         let a = pubs[indexPath.row] as CSAPubs
         cell.textLabel?.text = a.name
         cell.imageView?.image = UIImage(named: a.imageName!)
-
+        
+    
         return cell
     }
     
@@ -104,14 +103,35 @@ class CSAPubsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if segue.identifier == "DetailSegue"
+        {
+            let detailVC = ((segue.destinationViewController) as! PubDetailViewController)
+            var path = self.tableView!.indexPathForSelectedRow!
+            let strName = pubs[path.row].name
+            detailVC.pubName = strName
+            detailVC.title = "Pubs"
+            
+            
+        }
+        
+        
+
+       
+        
+  
+        
+        }
+        
+        
+
+
 
 }
