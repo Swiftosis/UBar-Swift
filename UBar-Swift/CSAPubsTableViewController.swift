@@ -63,6 +63,8 @@ class CSAPubsTableViewController: UITableViewController {
         cell.textLabel?.text = a.name
         cell.imageView?.image = UIImage(named: a.imageName!)
         
+        
+        
     
         return cell
     }
