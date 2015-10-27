@@ -16,7 +16,7 @@
                         <color key="backgroundColor" red="0.1960784314" green="0.21960784310000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Szimpla" textLabel="mnZ-x4-dI3" imageView="PYs-oP-41j" style="IBUITableViewCellStyleDefault" id="jmr-jP-05y" userLabel="Szimpla">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jmr-jP-05y" id="GBk-N0-qWy">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -115,19 +115,16 @@
             </objects>
             <point key="canvasLocation" x="1080" y="-262"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root Navigation Controller-->
         <scene sceneID="uLC-vP-J2N">
             <objects>
-                <navigationController id="hKg-bE-lpp" sceneMemberID="viewController">
+                <navigationController id="hKg-bE-lpp" customClass="RootNavigationController" customModule="UBar_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kXA-Ke-fuI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="agg-TW-gdd" kind="relationship" relationship="rootViewController" id="BiK-NR-MtH"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHf-0G-mEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

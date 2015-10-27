@@ -8,7 +8,7 @@
         <!--Loading View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoadingViewController" customModule="UBar_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoadingViewController" id="BYZ-38-t0r" customClass="LoadingViewController" customModule="UBar_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="xN3-7e-CZY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="xN3-7e-CZY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -37,8 +37,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xN3-7e-CZY" secondAttribute="trailing" id="BWS-vH-fx6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xN3-7e-CZY" secondAttribute="bottom" id="U2k-of-C6A"/>
+                            <constraint firstItem="xN3-7e-CZY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zus-MO-HEu"/>
                             <constraint firstItem="qcc-eK-LVC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epF-le-DAv"/>
                             <constraint firstItem="iQF-Z2-bIn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGg-sR-LH4"/>
+                            <constraint firstItem="xN3-7e-CZY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tgW-DJ-gcN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qcc-eK-LVC" secondAttribute="bottom" constant="20" id="uuW-JR-2Ar"/>
                             <constraint firstItem="iQF-Z2-bIn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wok-D7-3NS"/>
                         </constraints>
