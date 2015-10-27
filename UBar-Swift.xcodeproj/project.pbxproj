@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1474BE2D1BDE858400F63349 /* CSAMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */; };
-		1474BE311BDE87FF00F63349 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE301BDE87FF00F63349 /* MapViewController.swift */; };
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
 		D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64524641BDE47E700E19419 /* PubDetailViewController.swift */; };
 		D6852F571BD7B62900ADE3A3 /* PubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */; };
@@ -94,8 +93,6 @@
 		1474BE2E1BDE859100F63349 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6D16A821BD67D360009B845 /* Main.storyboard */,
-				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
 				1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */,
 			);
 			name = Views;
@@ -104,8 +101,6 @@
 		1474BE2F1BDE85B700F63349 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D6D16A8A1BD67D360009B845 /* Info.plist */,
-				D6D16A851BD67D360009B845 /* Assets.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -114,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				1474BE301BDE87FF00F63349 /* MapViewController.swift */,
-				D6D16A801BD67D360009B845 /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
