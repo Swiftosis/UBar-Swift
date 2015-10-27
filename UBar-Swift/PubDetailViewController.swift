@@ -11,7 +11,7 @@ import UIKit
 
 class PubDetailViewController: UIViewController {
     
-    var pubName:String!
+    var pubName:String! = ""
 
     @IBOutlet weak var pubNameLabel: UILabel!
     

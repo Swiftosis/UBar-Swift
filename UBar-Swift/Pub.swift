@@ -1,5 +1,5 @@
 //
-//  CSAPubs.swift
+//  Pub.swift
 //  UBar-Swift
 //
 //  Created by Bettina Hegedus on 2015. 10. 22..
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CSAPubs {
+class Pub {
     var name:String?
     var city:String?
     var street:String?
