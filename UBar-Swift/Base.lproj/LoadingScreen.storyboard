@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="BYZ-38-t0r" customClass="LoadingViewController" customModule="UBar_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="xN3-7e-CZY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="iQF-Z2-bIn">
+                                <rect key="frame" x="113" y="220" width="95" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="gKH-FE-AOJ"/>
+                                    <constraint firstAttribute="height" constant="128" id="j4c-3C-FZH"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-eK-LVC">
+                                <rect key="frame" x="142" y="511" width="37" height="37"/>
+                                <animations/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xN3-7e-CZY" secondAttribute="trailing" id="BWS-vH-fx6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xN3-7e-CZY" secondAttribute="bottom" id="U2k-of-C6A"/>
+                            <constraint firstItem="xN3-7e-CZY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zus-MO-HEu"/>
+                            <constraint firstItem="qcc-eK-LVC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epF-le-DAv"/>
+                            <constraint firstItem="iQF-Z2-bIn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGg-sR-LH4"/>
+                            <constraint firstItem="xN3-7e-CZY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tgW-DJ-gcN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qcc-eK-LVC" secondAttribute="bottom" constant="20" id="uuW-JR-2Ar"/>
+                            <constraint firstItem="iQF-Z2-bIn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wok-D7-3NS"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="qcc-eK-LVC" id="xoc-o3-TzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-white" width="300" height="439"/>
+        <image name="splash" width="540" height="960"/>
+    </resources>
+</document>
