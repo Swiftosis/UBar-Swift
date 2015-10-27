@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoadingViewController.swift
 //  UBar-Swift
 //
 //  Created by Bettina Hegedus on 2015. 10. 20..
@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoadingViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.activityIndicatorView.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
