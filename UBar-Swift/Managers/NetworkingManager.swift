@@ -26,7 +26,10 @@ let kReqRedirUrlStr = "https://uber.codingsans.com/";
 
 let kIsTutorialLaunchedFirstTimeString = "isfirstlaunch";
 
+
 class NetworkingManager: NSObject {
+    
+    static let sharedInstance = NetworkingManager()
     
     let sessionManager: AFHTTPSessionManager
     
@@ -39,8 +42,89 @@ class NetworkingManager: NSObject {
     
     @objc func trySendLocation(coordinate coordinate: CLLocationCoordinate2D, onSuccess: (mapUrlStr:String) -> Void, onFailure: (error:NSError, statusCode:HTTPStatusCode ) -> Void ) {
         
-        onFailure(error: NSError(domain: "", code: 999, userInfo: nil) ,statusCode: .Continue)
-        onSuccess(mapUrlStr: "sfd")
+        
+        
+        
+        let reqData = [
+            "position":
+                [
+                    "longitude": coordinate.longitude,
+                    "latitude" : coordinate.latitude
+            ]
+        ]
+        
+        self.sessionManager.POST(kRequestEndPointStr, parameters: reqData,
+            success: { (task, responseObj) -> Void in
+                
+                let statusCode:HTTPStatusCode
+                if let response:NSHTTPURLResponse = task.response as? NSHTTPURLResponse {
+                    statusCode = HTTPStatusCode(rawValue: response.statusCode) ?? .Unknown
+                } else {
+                    statusCode = .Unknown
+                }
+                
+                
+                guard let responseDict = responseObj as? [String:AnyObject] else {
+                    
+                    let error = NSError(domain: kCSAErrorDomain, code: CSAErrorCode.ResponseDataInvalid.rawValue, userInfo: nil)
+                    onFailure(error: error, statusCode: statusCode)
+                    return
+                }
+                
+                if let responseUrlStr = responseDict[kMapURLKey] as? String {
+                    
+                    onSuccess(mapUrlStr: responseUrlStr)
+                    
+                } else {
+                    
+                    let error = NSError(domain: kCSAErrorDomain, code: CSAErrorCode.ResponseDataInvalid.rawValue, userInfo: nil)
+                    onFailure(error: error, statusCode: statusCode)
+                }
+                
+            },
+            failure: { (task, error) -> Void in
+                let statusCode:HTTPStatusCode
+                if let response:NSHTTPURLResponse = error.userInfo[AFNetworkingOperationFailingURLResponseErrorKey] as? NSHTTPURLResponse {
+                    statusCode = HTTPStatusCode(rawValue: response.statusCode) ?? .Unknown
+                } else {
+                    statusCode = .Unknown
+                }
+                
+                onFailure(error: error, statusCode: statusCode)
+                
+            }
+        )
+        
     }
+    
+    func checkLogin(onLoggedIn onLoggedIn: () -> Void, onNotLoggedIn: () -> Void, failure: (( NSError) -> Void)?) {
+        
+        self.sessionManager.GET(kCheckLoginEndPointStr, parameters: nil,
+            success: { (task, responseObj) -> Void in
+                
+                guard let isLoggedIn = responseObj[kLoggedinKey] as? Bool else {
+                    let error = NSError(domain: kCSAErrorDomain, code: CSAErrorCode.ResponseDataInvalid.rawValue, userInfo: nil)
+                    if let failure = failure {
+                        failure(error)
+                    }
+                    return
+                }
+                
+                if isLoggedIn {
+                    onLoggedIn()
+                } else {
+                    onNotLoggedIn()
+                }
+                
+            },
+            failure: { (task, error) -> Void in
+                if let failure = failure {
+                    failure(error)
+                }
+            }
+        )
+        
+    }
+
 
 }

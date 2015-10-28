@@ -34,8 +34,9 @@
  *      >List of HTTP status codes</a>
  */
 
-typedef NS_ENUM(NSUInteger, HTTPStatusCode) {
-
+typedef NS_ENUM(NSInteger, HTTPStatusCode) {
+    
+    kHTTPStatusCodeUnknown = 0,
     /*--------------------------------------------------
      * 1xx Informational
      *------------------------------------------------*/

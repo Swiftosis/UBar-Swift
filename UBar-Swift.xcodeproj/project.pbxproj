@@ -12,6 +12,7 @@
 		1474BE351BDFAF2D00F63349 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE301BDE87FF00F63349 /* MapViewController.swift */; };
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
 		C31087A11BDFD39500064ABE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A801BD67D360009B845 /* LoadingViewController.swift */; };
+		C31087A61BE0F60600064ABE /* CSAErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C31087A51BE0F60600064ABE /* CSAErrorDomain.m */; };
 		C365CA7E1BD6911D0013D474 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */; };
 		C365CA821BD6A1920013D474 /* CSAClass-ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */; };
 		D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64524641BDE47E700E19419 /* PubDetailViewController.swift */; };
@@ -49,11 +50,13 @@
 		1474BE301BDE87FF00F63349 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1474BE331BDF945200F63349 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31087A31BE0F54D00064ABE /* CSAErrorDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAErrorDomain.h; sourceTree = "<group>"; };
+		C31087A41BE0F54D00064ABE /* HTTPStatusCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCodes.h; sourceTree = "<group>"; };
+		C31087A51BE0F60600064ABE /* CSAErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAErrorDomain.m; sourceTree = "<group>"; };
 		C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		C365CA7F1BD6A1920013D474 /* UBar-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBar-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		C365CA801BD6A1920013D474 /* CSAClass-ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CSAClass-ObjC.h"; sourceTree = "<group>"; };
 		C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSAClass-ObjC.m"; sourceTree = "<group>"; };
-		C365CA841BD6A73C0013D474 /* HTTPStatusCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCodes.h; sourceTree = "<group>"; };
 		D64524641BDE47E700E19419 /* PubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubDetailViewController.swift; sourceTree = "<group>"; };
 		D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubsTableViewController.swift; sourceTree = "<group>"; };
 		D6953FEC1BDF7EDF00AC83D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoadingScreen.storyboard; sourceTree = "<group>"; };
@@ -152,9 +155,11 @@
 		C365CA831BD6A72C0013D474 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				C365CA841BD6A73C0013D474 /* HTTPStatusCodes.h */,
+				C31087A31BE0F54D00064ABE /* CSAErrorDomain.h */,
+				C31087A51BE0F60600064ABE /* CSAErrorDomain.m */,
+				C31087A41BE0F54D00064ABE /* HTTPStatusCodes.h */,
 			);
-			name = Constants;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		D6D16A721BD67D360009B845 = {
@@ -412,6 +417,7 @@
 				C365CA7E1BD6911D0013D474 /* NetworkingManager.swift in Sources */,
 				C365CA821BD6A1920013D474 /* CSAClass-ObjC.m in Sources */,
 				C31087A11BDFD39500064ABE /* LoadingViewController.swift in Sources */,
+				C31087A61BE0F60600064ABE /* CSAErrorDomain.m in Sources */,
 				D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */,
 				1474BE341BDF945200F63349 /* RootNavigationController.swift in Sources */,
 				1474BE351BDFAF2D00F63349 /* MapViewController.swift in Sources */,

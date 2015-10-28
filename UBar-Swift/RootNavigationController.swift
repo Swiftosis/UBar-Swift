@@ -19,9 +19,8 @@ func storyboardViewController(storyboardName storyboardName:String,storyboardID:
 }
 // MARK: -
 class RootNavigationController: UINavigationController {
-
     
-    
+    let networingManager = NetworkingManager.sharedInstance
     
     static var sharedRootVC:RootNavigationController? {
         get {
@@ -40,6 +39,17 @@ class RootNavigationController: UINavigationController {
         self.displayLoadingScreen()
 
 
+        
+//        self.networingManager.checkLogin(
+//            onLoggedIn: { [unowned self] () -> Void in
+//                self.loggedIn()
+//            },
+//            onNotLoggedIn: { [unowned self] () -> Void in
+//                
+//            },
+//            failure: nil)
+        
+        
         // Test function!
         let secondsToWait = 3
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, ( Int64(UInt64(secondsToWait) * NSEC_PER_SEC) )), dispatch_get_main_queue(), {
