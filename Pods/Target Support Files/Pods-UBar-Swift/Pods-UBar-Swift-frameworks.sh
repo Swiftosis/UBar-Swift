@@ -85,7 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-UBar-Swift/AFNetworking.framework"
+  install_framework "Pods-UBar-Swift/JGProgressHUD.framework"
+  install_framework "Pods-UBar-Swift/libextobjc.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-UBar-Swift/AFNetworking.framework"
+  install_framework "Pods-UBar-Swift/JGProgressHUD.framework"
+  install_framework "Pods-UBar-Swift/libextobjc.framework"
 fi

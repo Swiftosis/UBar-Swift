@@ -20,25 +20,38 @@ func storyboardViewController(storyboardName storyboardName:String,storyboardID:
 // MARK: -
 class RootNavigationController: UINavigationController {
     
+    let networingManager = NetworkingManager.sharedInstance
+    
     static var sharedRootVC:RootNavigationController? {
         get {
+
             guard let rootViewController:RootNavigationController = UIApplication.sharedApplication().delegate?.window??.rootViewController as? RootNavigationController else {
                 return nil
             }
+            
             return rootViewController
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.displayLoadingScreen()
 
-        // Test function!
-        let secondsToWait = 3
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, ( Int64(UInt64(secondsToWait) * NSEC_PER_SEC) )), dispatch_get_main_queue(), {
-            self.loggedIn()
-        });
-        //
+
+        
+        self.networingManager.checkLogin(
+            onLoggedIn: { [unowned self] () -> Void in
+                self.loggedIn()
+            },
+            onNotLoggedIn: { [unowned self] () -> Void in
+                self.displayUberWebViewScreen(urlToLoad: kAuthEndPointStr, loadType: .Login)
+            },
+            failure: nil)
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,12 +74,31 @@ class RootNavigationController: UINavigationController {
         self.setViewControllers( [loadingVC] , animated: true)
     }
     
+    func displayUberWebViewScreen(urlToLoad url:String, loadType:UberWebViewLoadType) {
+        guard let uberWebVC = storyboardViewController(storyboardName: "UberWebViewScreen", storyboardID: "UberWebViewController") as? UberWebViewController else {
+            assert(true)
+            return
+        }
+        
+        uberWebVC.loadType = loadType
+        uberWebVC.URLStringToLoad = url
+        
+        self.navigationBarHidden = true
+        
+        self.setViewControllers( [uberWebVC] , animated: true)
+    }
+    
     func displayMapScreen() {
+        self.displayMapScreenAninated(false)
+    }
+    
+    func displayMapScreenAninated(aninated:Bool) {
         guard let loadingVC:MapViewController = storyboardViewController(storyboardName: "CSAMapViewController", storyboardID: "CSAMapViewController") as? MapViewController else {
             assert(true)
             return
         }
         self.navigationBarHidden = true
-        self.setViewControllers([loadingVC] , animated: false)
+        
+        self.setViewControllers( [loadingVC] , animated: aninated)
     }
 }

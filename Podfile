@@ -5,6 +5,8 @@ use_frameworks!
 
 target 'UBar-Swift' do
 pod "AFNetworking”, ‘2.6.1’
+pod "libextobjc/EXTScope", "0.4.1"
+pod "JGProgressHUD", "1.3.1"
 end
 
 target 'UBar-SwiftTests' do
