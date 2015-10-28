@@ -6,17 +6,20 @@
 //  Copyright © 2015 CodingSans. All rights reserved.
 //
 #import <WebKit/WebKit.h>
-#import "NetworkingManager.h"
+#import "Ubar_Swift-Swift.h"
+@import AFNetworking;
+
 #import "NetworkingConstants.h"
 #import "UberWebViewController.h"
 #import "JGProgressHUD.h"
 
+
 @interface UberWebViewController () <WKNavigationDelegate>
 
-@property (strong, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic, readonly) WKWebView * webView;
 @property (strong, nonatomic) NetworkingManager * networkingManager;
-@property (strong,nonatomic) JGProgressHUD * HUD;
+@property (strong, nonatomic) JGProgressHUD * HUD;
 
 @end
 
@@ -48,20 +51,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.networkingManager = [NetworkingManager new];
+    self.networkingManager = [NetworkingManager sharedInstance];
     
     self.HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
     
-    NSURLRequest * request = [NSURLRequest new];
-    
-    request = [self.networkingManager.sessionMan.requestSerializer requestWithMethod:@"GET"
-                                                                 URLString:kTestURL
-                                                                parameters:nil
-                                                                     error:nil];
+    NSURLRequest * request =
+    [self.networkingManager.sessionManager.requestSerializer requestWithMethod:@"GET"
+                                                                     URLString:kTestURL
+                                                                    parameters:nil
+                                                                         error:nil];
 
     if (self.loadType == UberWebViewLoadTypeLogin) {
         
-        NSURL * baseURL = self.networkingManager.sessionMan.baseURL;
+        NSURL * baseURL = self.networkingManager.sessionManager.baseURL;
         
         NSURL * authURL = [baseURL URLByAppendingPathComponent:kAuthEndPointStr];
         
@@ -70,7 +72,7 @@
                                              };
         
         request =
-        [self.networkingManager.sessionMan.requestSerializer requestWithMethod:@"GET"
+        [self.networkingManager.sessionManager.requestSerializer requestWithMethod:@"GET"
                                                                      URLString:authURL.absoluteString
                                                                     parameters:requestParameters
                                                                          error:nil];
@@ -78,7 +80,7 @@
         
     } else if (self.loadType == UberWebViewLoadTypeMap){
         request =
-        [self.networkingManager.sessionMan.requestSerializer requestWithMethod:@"GET"
+        [self.networkingManager.sessionManager.requestSerializer requestWithMethod:@"GET"
                                                                      URLString:self.URLStringToLoad
                                                                     parameters:nil
                                                                         error:nil];
@@ -113,7 +115,11 @@
         NSLog(@"Redirected to the URL");
         
         decisionHandler(WKNavigationActionPolicyCancel);
-        [self.navigationController popViewControllerAnimated:YES];
+        
+        RootNavigationController * rootVC = [RootNavigationController sharedRootVC];
+        
+        [rootVC displayMapScreenAninated:YES];
+        
         
     } else {
         

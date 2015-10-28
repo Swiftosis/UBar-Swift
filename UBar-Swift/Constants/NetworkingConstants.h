@@ -1,7 +1,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "HTTPStatusCodes.h"
 
 //URLs
 FOUNDATION_EXPORT NSString * kBaseUrlStr;

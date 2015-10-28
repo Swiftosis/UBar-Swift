@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, UberWebViewLoadType) {
 
 @interface UberWebViewController : UIViewController
 
-@property (weak,nonatomic) NSString * URLStringToLoad;
+@property (strong, nonatomic) NSString * URLStringToLoad;
 @property (nonatomic) UberWebViewLoadType loadType;
 
 @end

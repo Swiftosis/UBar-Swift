@@ -11,12 +11,15 @@
 		1474BE341BDF945200F63349 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE331BDF945200F63349 /* RootNavigationController.swift */; };
 		1474BE351BDFAF2D00F63349 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE301BDE87FF00F63349 /* MapViewController.swift */; };
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
-		C31087A11BDFD39500064ABE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A801BD67D360009B845 /* LoadingViewController.swift */; };
 		C31087A61BE0F60600064ABE /* CSAErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C31087A51BE0F60600064ABE /* CSAErrorDomain.m */; };
+		C31087A91BE101E900064ABE /* UberWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31087A81BE101E900064ABE /* UberWebViewController.m */; };
+		C31087AF1BE102E900064ABE /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31087AD1BE102E900064ABE /* PubDetailViewController.swift */; };
+		C31087B01BE102E900064ABE /* PubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31087AE1BE102E900064ABE /* PubsTableViewController.swift */; };
+		C31087B21BE1030A00064ABE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31087B11BE1030A00064ABE /* LoadingViewController.swift */; };
+		C31087B51BE1035800064ABE /* UberWebViewScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31087B41BE1035800064ABE /* UberWebViewScreen.storyboard */; };
+		C31087B81BE1050800064ABE /* NetworkingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C31087B71BE1050800064ABE /* NetworkingConstants.m */; };
 		C365CA7E1BD6911D0013D474 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */; };
 		C365CA821BD6A1920013D474 /* CSAClass-ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */; };
-		D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64524641BDE47E700E19419 /* PubDetailViewController.swift */; };
-		D6852F571BD7B62900ADE3A3 /* PubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */; };
 		D6953FED1BDF7EDF00AC83D0 /* LoadingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */; };
 		D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A7E1BD67D360009B845 /* AppDelegate.swift */; };
 		D6D16A841BD67D360009B845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A821BD67D360009B845 /* Main.storyboard */; };
@@ -53,16 +56,21 @@
 		C31087A31BE0F54D00064ABE /* CSAErrorDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAErrorDomain.h; sourceTree = "<group>"; };
 		C31087A41BE0F54D00064ABE /* HTTPStatusCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCodes.h; sourceTree = "<group>"; };
 		C31087A51BE0F60600064ABE /* CSAErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAErrorDomain.m; sourceTree = "<group>"; };
+		C31087A71BE101E900064ABE /* UberWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UberWebViewController.h; sourceTree = "<group>"; };
+		C31087A81BE101E900064ABE /* UberWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UberWebViewController.m; sourceTree = "<group>"; };
+		C31087AD1BE102E900064ABE /* PubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubDetailViewController.swift; sourceTree = "<group>"; };
+		C31087AE1BE102E900064ABE /* PubsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubsTableViewController.swift; sourceTree = "<group>"; };
+		C31087B11BE1030A00064ABE /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		C31087B41BE1035800064ABE /* UberWebViewScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UberWebViewScreen.storyboard; sourceTree = "<group>"; };
+		C31087B61BE1050800064ABE /* NetworkingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingConstants.h; sourceTree = "<group>"; };
+		C31087B71BE1050800064ABE /* NetworkingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingConstants.m; sourceTree = "<group>"; };
 		C365CA7D1BD6911D0013D474 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		C365CA7F1BD6A1920013D474 /* UBar-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBar-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		C365CA801BD6A1920013D474 /* CSAClass-ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CSAClass-ObjC.h"; sourceTree = "<group>"; };
 		C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CSAClass-ObjC.m"; sourceTree = "<group>"; };
-		D64524641BDE47E700E19419 /* PubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubDetailViewController.swift; sourceTree = "<group>"; };
-		D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubsTableViewController.swift; sourceTree = "<group>"; };
 		D6953FEC1BDF7EDF00AC83D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoadingScreen.storyboard; sourceTree = "<group>"; };
 		D6D16A7B1BD67D360009B845 /* UBar-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UBar-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A7E1BD67D360009B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6D16A801BD67D360009B845 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		D6D16A831BD67D360009B845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6D16A851BD67D360009B845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6D16A881BD67D360009B845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,14 +111,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1474BE2E1BDE859100F63349 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		1474BE2F1BDE85B700F63349 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +121,15 @@
 		1474BE321BDE895000F63349 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1474BE331BDF945200F63349 /* RootNavigationController.swift */,
+				C31087B11BE1030A00064ABE /* LoadingViewController.swift */,
 				1474BE301BDE87FF00F63349 /* MapViewController.swift */,
+				C31087AD1BE102E900064ABE /* PubDetailViewController.swift */,
+				C31087AE1BE102E900064ABE /* PubsTableViewController.swift */,
+				1474BE331BDF945200F63349 /* RootNavigationController.swift */,
+				C31087A71BE101E900064ABE /* UberWebViewController.h */,
+				C31087A81BE101E900064ABE /* UberWebViewController.m */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6AF8E0E263859ABAD2132814 /* Pods */ = {
@@ -144,6 +149,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C31087B31BE1032A00064ABE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */,
+				D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */,
+				D6D16A821BD67D360009B845 /* Main.storyboard */,
+				C31087B41BE1035800064ABE /* UberWebViewScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		C365CA7C1BD6905A0013D474 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +174,8 @@
 				C31087A31BE0F54D00064ABE /* CSAErrorDomain.h */,
 				C31087A51BE0F60600064ABE /* CSAErrorDomain.m */,
 				C31087A41BE0F54D00064ABE /* HTTPStatusCodes.h */,
+				C31087B61BE1050800064ABE /* NetworkingConstants.h */,
+				C31087B71BE1050800064ABE /* NetworkingConstants.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -189,22 +207,17 @@
 			children = (
 				D6D16A7E1BD67D360009B845 /* AppDelegate.swift */,
 				1474BE321BDE895000F63349 /* ViewControllers */,
-				1474BE2E1BDE859100F63349 /* Views */,
-				1474BE2F1BDE85B700F63349 /* Resources */,
-				D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */,
 				C365CA801BD6A1920013D474 /* CSAClass-ObjC.h */,
 				C365CA811BD6A1920013D474 /* CSAClass-ObjC.m */,
 				C365CA831BD6A72C0013D474 /* Constants */,
 				C365CA7C1BD6905A0013D474 /* Managers */,
-				D6D16A801BD67D360009B845 /* LoadingViewController.swift */,
-				D6D16A821BD67D360009B845 /* Main.storyboard */,
+				C31087B31BE1032A00064ABE /* Storyboards */,
 				D6D16A851BD67D360009B845 /* Assets.xcassets */,
 				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
 				D6D16A8A1BD67D360009B845 /* Info.plist */,
-				D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */,
 				D6D83C131BD908C400F84A1B /* Pub.swift */,
-				D64524641BDE47E700E19419 /* PubDetailViewController.swift */,
 				C365CA7F1BD6A1920013D474 /* UBar-Swift-Bridging-Header.h */,
+				1474BE2F1BDE85B700F63349 /* Resources */,
 			);
 			path = "UBar-Swift";
 			sourceTree = "<group>";
@@ -338,6 +351,7 @@
 				D6953FED1BDF7EDF00AC83D0 /* LoadingScreen.storyboard in Resources */,
 				D6D16A861BD67D360009B845 /* Assets.xcassets in Resources */,
 				1474BE2D1BDE858400F63349 /* CSAMapViewController.storyboard in Resources */,
+				C31087B51BE1035800064ABE /* UberWebViewScreen.storyboard in Resources */,
 				D6D16A841BD67D360009B845 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,16 +425,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */,
+				C31087A91BE101E900064ABE /* UberWebViewController.m in Sources */,
+				C31087AF1BE102E900064ABE /* PubDetailViewController.swift in Sources */,
 				D6D83C141BD908C400F84A1B /* Pub.swift in Sources */,
-				D6852F571BD7B62900ADE3A3 /* PubsTableViewController.swift in Sources */,
 				C365CA7E1BD6911D0013D474 /* NetworkingManager.swift in Sources */,
 				C365CA821BD6A1920013D474 /* CSAClass-ObjC.m in Sources */,
-				C31087A11BDFD39500064ABE /* LoadingViewController.swift in Sources */,
 				C31087A61BE0F60600064ABE /* CSAErrorDomain.m in Sources */,
 				D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */,
+				C31087B01BE102E900064ABE /* PubsTableViewController.swift in Sources */,
 				1474BE341BDF945200F63349 /* RootNavigationController.swift in Sources */,
+				C31087B81BE1050800064ABE /* NetworkingConstants.m in Sources */,
 				1474BE351BDFAF2D00F63349 /* MapViewController.swift in Sources */,
+				C31087B21BE1030A00064ABE /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
