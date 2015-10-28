@@ -10,6 +10,7 @@
 		1474BE2D1BDE858400F63349 /* CSAMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */; };
 		1474BE341BDF945200F63349 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE331BDF945200F63349 /* RootNavigationController.swift */; };
 		1474BE351BDFAF2D00F63349 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE301BDE87FF00F63349 /* MapViewController.swift */; };
+		1474BE371BE0F0A700F63349 /* MapChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1474BE361BE0F0A700F63349 /* MapChildViewController.swift */; };
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
 		D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64524641BDE47E700E19419 /* PubDetailViewController.swift */; };
 		D6852F571BD7B62900ADE3A3 /* PubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */; };
@@ -46,6 +47,7 @@
 		1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CSAMapViewController.storyboard; sourceTree = "<group>"; };
 		1474BE301BDE87FF00F63349 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1474BE331BDF945200F63349 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		1474BE361BE0F0A700F63349 /* MapChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapChildViewController.swift; sourceTree = "<group>"; };
 		891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64524641BDE47E700E19419 /* PubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubDetailViewController.swift; sourceTree = "<group>"; };
 		D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubsTableViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				1474BE2C1BDE858400F63349 /* CSAMapViewController.storyboard */,
+				D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */,
+				D6D16A821BD67D360009B845 /* Main.storyboard */,
+				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -104,6 +109,8 @@
 		1474BE2F1BDE85B700F63349 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D6D16A851BD67D360009B845 /* Assets.xcassets */,
+				D6D16A8A1BD67D360009B845 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -113,8 +120,20 @@
 			children = (
 				1474BE331BDF945200F63349 /* RootNavigationController.swift */,
 				1474BE301BDE87FF00F63349 /* MapViewController.swift */,
+				1474BE361BE0F0A700F63349 /* MapChildViewController.swift */,
+				D64524641BDE47E700E19419 /* PubDetailViewController.swift */,
+				D6D16A801BD67D360009B845 /* LoadingViewController.swift */,
+				D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1474BE381BE10AF800F63349 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6D83C131BD908C400F84A1B /* Pub.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		6AF8E0E263859ABAD2132814 /* Pods */ = {
@@ -163,15 +182,7 @@
 				1474BE321BDE895000F63349 /* ViewControllers */,
 				1474BE2E1BDE859100F63349 /* Views */,
 				1474BE2F1BDE85B700F63349 /* Resources */,
-				D6D16A801BD67D360009B845 /* LoadingViewController.swift */,
-				D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */,
-				D6D16A821BD67D360009B845 /* Main.storyboard */,
-				D6D16A851BD67D360009B845 /* Assets.xcassets */,
-				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
-				D6D16A8A1BD67D360009B845 /* Info.plist */,
-				D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */,
-				D6D83C131BD908C400F84A1B /* Pub.swift */,
-				D64524641BDE47E700E19419 /* PubDetailViewController.swift */,
+				1474BE381BE10AF800F63349 /* Models */,
 			);
 			path = "UBar-Swift";
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1474BE371BE0F0A700F63349 /* MapChildViewController.swift in Sources */,
 				D6D16A811BD67D360009B845 /* LoadingViewController.swift in Sources */,
 				D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */,
 				D6D83C141BD908C400F84A1B /* Pub.swift in Sources */,
