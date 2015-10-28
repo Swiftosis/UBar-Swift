@@ -13,10 +13,7 @@ class LoadingViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
@@ -27,7 +24,6 @@ class LoadingViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
-        
     }
     
     override func didReceiveMemoryWarning() {

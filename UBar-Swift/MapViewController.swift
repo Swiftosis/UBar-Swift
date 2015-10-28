@@ -16,25 +16,6 @@ import CoreLocation
     @objc func mapViewController(controller:MapViewController, didSetLocation: CLLocation)
 }
 
-/**
- 
- Uber like ViewController that provides current CLLocation 
- upon user tap through delegate.
- 
- Usage
- ----
- 
- Add "NSLocationWhenInUseUsageDescription" String to Info.plist,
- the user location fetch will work only that way.
- 
- Copy the CSAMapViewController storyboard file and this class 
- and copy the relating methods from one of the ViewController classes
- to your project. [MODULE_NAME]-Bridging-Header.h is required 
- if your project is Objective-C.
- 
- 
- */
-
 @objc(CSAMapViewController)
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -63,33 +44,40 @@ class MapViewController: UIViewController {
         }
     }
     
-    private func geoCode(location: CLLocation!){
+    private func geoCode(location: CLLocation) {
         geoCoder.cancelGeocode()
+        
         geoCoder.reverseGeocodeLocation(location, completionHandler: { (data, error) -> Void in
-            guard let placeMarks = data as [CLPlacemark]! else {
+            
+            guard let placeMarks = data else {
                 return
             }
-            let loc: CLPlacemark = placeMarks[0]
-            self.currentLocation = loc.location
-            let addressDict: [NSString:NSObject] = loc.addressDictionary as! [NSString:NSObject]
-            var addrList = addressDict["FormattedAddressLines"] as! [String]
-            addrList.popLast()
+            guard let placeMark: CLPlacemark = placeMarks.first else {
+                return
+            }
+            
+            self.currentLocation = placeMark.location
+            
+            guard let addressList = placeMark.addressDictionary?["FormattedAddressLines"] as? [String] else {
+                return
+            }
+            if addressList.isEmpty {
+                return
+            }
+            
+            let addrList = addressList.dropLast()
             let text: String
-            if(addrList.count > 1) {
+            if(addrList.count >= 2) {
                 text = addrList.dropFirst().joinWithSeparator(", ")
-            }else{
-                if !addrList.isEmpty {
-                    text = addrList[0]
+            } else {
+                if let firstText = addrList.first {
+                    text = firstText
                 } else {
                     text = "Unknown address"
                 }
             }
-            self.writeLabel(text)
+            self.addressLabel.text = text
         })
-    }
-    
-    private func writeLabel(address: String) {
-        addressLabel.text = address
     }
 }
 
@@ -104,8 +92,10 @@ extension MapViewController: MKMapViewDelegate {
 // MARK: - CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        guard let location = locations.last else {
+            return
+        }
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.01))
         self.mapView.setRegion(region, animated: false)
         self.locationManager.stopUpdatingLocation()
