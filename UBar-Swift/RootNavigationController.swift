@@ -19,26 +19,19 @@ func storyboardViewController(storyboardName storyboardName:String,storyboardID:
 }
 // MARK: -
 class RootNavigationController: UINavigationController {
-
-    
-    
     
     static var sharedRootVC:RootNavigationController? {
         get {
-
             guard let rootViewController:RootNavigationController = UIApplication.sharedApplication().delegate?.window??.rootViewController as? RootNavigationController else {
                 return nil
             }
-            
             return rootViewController
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.displayLoadingScreen()
-
 
         // Test function!
         let secondsToWait = 3
@@ -46,8 +39,6 @@ class RootNavigationController: UINavigationController {
             self.loggedIn()
         });
         //
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,33 +46,19 @@ class RootNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Public interface
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func loggedIn() {
         self.displayMapScreen()
     }
-    
-    // MARK: - Public interface
     
     func displayLoadingScreen() {
         guard let loadingVC:LoadingViewController = storyboardViewController(storyboardName: "LoadingScreen", storyboardID: "LoadingViewController") as? LoadingViewController else {
             assert(true)
             return
         }
-        
         self.navigationBarHidden = true
-        
         self.setViewControllers( [loadingVC] , animated: true)
-        
-        
     }
     
     func displayMapScreen() {
@@ -89,10 +66,7 @@ class RootNavigationController: UINavigationController {
             assert(true)
             return
         }
-        
         self.navigationBarHidden = true
-        
-        self.setViewControllers( [loadingVC] , animated: false)
+        self.setViewControllers([loadingVC] , animated: false)
     }
-
 }
