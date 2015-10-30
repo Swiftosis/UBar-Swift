@@ -7,11 +7,13 @@
 //
 #import <WebKit/WebKit.h>
 #import "Ubar_Swift-Swift.h"
+
 @import AFNetworking;
+@import JGProgressHUD;
 
 #import "NetworkingConstants.h"
 #import "UberWebViewController.h"
-#import "JGProgressHUD.h"
+
 
 
 @interface UberWebViewController () <WKNavigationDelegate>
@@ -101,6 +103,7 @@
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [self.HUD showInView:self.view animated:YES];
 }
 
 /*
@@ -115,6 +118,9 @@
         NSLog(@"Redirected to the URL");
         
         decisionHandler(WKNavigationActionPolicyCancel);
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self.HUD dismissAnimated:YES];
         
         RootNavigationController * rootVC = [RootNavigationController sharedRootVC];
         
