@@ -1,93 +1,76 @@
 //
 //  PubsTableViewController.swift
-//  UBar-Swift
+//  prototipus
 //
-//  Created by Bettina Hegedus on 2015. 10. 21..
+//  Created by Bettina Hegedus on 2015. 10. 27..
 //  Copyright © 2015. Bettina Hegedus. All rights reserved.
 //
 
-import UIKit
 
+let bars = [
+    Pub(name: "Zöld Macska", city: "1091 Budapest\nÜllői út 95",open:"Open today\n 12:00 pm - 4:00 am" ,imageName:"zold_macska"),
+    Pub(name: "Flamingo", city: "Esztergom Széchenyi tér 11, 2500",open:"Open today\n 12:00 pm - 4:00 am" ,imageName:"flamingo"),
+    Pub(name: "Szimpla Kert", city: "Budapest Kazinczy u. 14, 1075",open:"Open today\n 12:00 pm - 4:00 am", imageName:"szimpl"),
+    Pub(name: "Gong Café", city: "Budapest Erzsébet krt. 15, 1073",open:"Open today\n 12:00 pm - 4:00 am", imageName: "gong"),
+    Pub(name: "Rózsa Domb Presszó", city: "Budapest Margit körút 7, 1027",open:"Open today\n 12:00 pm - 4:00 am", imageName: "rozsa")
+]
 
-class PubsTableViewController: UITableViewController {
+class PubsTableViewController : UITableViewController {
     
-    let pubs = [ Pub(name: "Szimpla", city: "BP", street: "nemtom", number: 1, imageName: "szimpl"),
-        Pub(name: "Bagoly", city: "Karakóalsószörcsöge", street: "kaka", number: 12, imageName: "bagoly")]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        
-//        self.tableView.rowHeight = 500
-        
+        let titleImageView = UIImageView(image: UIImage(named: "logo-white_no_text") )
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 30, height:44)
+        titleImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        titleImageView.tintColor = UIColor.whiteColor()
+        navigationItem.titleView = titleImageView
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
-
+    
+    // MARK: - Popover
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.OverCurrentContext
+    }
+    
+    func presentationController(controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        let navController = UINavigationController(rootViewController: controller.presentedViewController)
+        
+        return navController
+    }
+    
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return pubs.count
+        return bars.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // Configure the cell...
-        
-        let reuseID:String = "Szimpla"
-        
-        guard let cell = tableView.dequeueReusableCellWithIdentifier(reuseID) else {
-            
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("BarCell") else {
             return UITableViewCell()
         }
-       // cell.textLabel?.text = name[indexPath.item]
-        let a = pubs[indexPath.row] as Pub
-        cell.textLabel?.text = a.name
-        cell.imageView?.image = UIImage(named: a.imageName!)
+        let bar = bars[indexPath.row]
+        cell.imageView!.image = UIImage(named: bar.imageName)
+        cell.imageView!.layer.masksToBounds = true
+        cell.textLabel!.text = bars[indexPath.row].name
         
-        
-    
         return cell
     }
     
-    // MARK: UITableViewDelegate
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let detailVC:PubDetailViewController = storyBoard.instantiateViewControllerWithIdentifier("PubDetailViewController") as! PubDetailViewController
-        
-        detailVC.pubName = pubs[indexPath.row].name
-        
-        self.navigationController!.pushViewController(detailVC, animated: true)
+
+        guard let detailVC = storyboardViewController(storyboardName: "PubListScreens", storyboardID: "PubDetailViewController") as? PubDetailViewController else {
+            assert(true)
+            return
+        }
         
         
+        detailVC.pub = bars[indexPath.row]
+        self.navigationController!.pushViewController(detailVC, animated: true)        
     }
-    
-//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        return 20
-//    }
-
-    
-        
-
-
-
 }

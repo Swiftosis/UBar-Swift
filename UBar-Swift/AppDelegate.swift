@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  UBar-Swift
+//  prototipus
 //
-//  Created by Bettina Hegedus on 2015. 10. 20..
+//  Created by Bettina Hegedus on 2015. 10. 27..
 //  Copyright © 2015. Bettina Hegedus. All rights reserved.
 //
 
@@ -12,12 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         // Override point for customization after application launch.
+        let theme = ThemeManager.currentTheme()
+        ThemeManager.applyTheme(theme)
         return true
     }
 
