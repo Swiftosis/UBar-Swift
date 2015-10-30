@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		347A34FA228DE98EA7296A81 /* Pods_UBar_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */; };
-		D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64524641BDE47E700E19419 /* PubDetailViewController.swift */; };
-		D6852F571BD7B62900ADE3A3 /* PubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */; };
 		D6953FED1BDF7EDF00AC83D0 /* LoadingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */; };
-		D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A7E1BD67D360009B845 /* AppDelegate.swift */; };
-		D6D16A811BD67D360009B845 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A801BD67D360009B845 /* LoadingViewController.swift */; };
-		D6D16A841BD67D360009B845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A821BD67D360009B845 /* Main.storyboard */; };
 		D6D16A861BD67D360009B845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A851BD67D360009B845 /* Assets.xcassets */; };
 		D6D16A891BD67D360009B845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */; };
 		D6D16A941BD67D360009B845 /* UBar_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A931BD67D360009B845 /* UBar_SwiftTests.swift */; };
 		D6D16A9F1BD67D360009B845 /* UBar_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D16A9E1BD67D360009B845 /* UBar_SwiftUITests.swift */; };
-		D6D83C141BD908C400F84A1B /* Pub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D83C131BD908C400F84A1B /* Pub.swift */; };
+		D6D312971BE3530E008EA10B /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D312961BE3530E008EA10B /* BarViewController.swift */; };
+		D6D312991BE35318008EA10B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D312981BE35318008EA10B /* Theme.swift */; };
+		D6D3129B1BE3531F008EA10B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3129A1BE3531F008EA10B /* AppDelegate.swift */; };
+		D6D3129D1BE35329008EA10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D3129C1BE35329008EA10B /* Main.storyboard */; };
+		D6D3129F1BE35331008EA10B /* BarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3129E1BE35331008EA10B /* BarTableViewController.swift */; };
+		D6D312A11BE35338008EA10B /* PubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D312A01BE35338008EA10B /* PubDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,8 @@
 /* Begin PBXFileReference section */
 		0C5BB7932FA9DA3321E9A52B /* Pods-UBar-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBar-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBar-Swift/Pods-UBar-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		891ADBD517AE837AF6CCAA7B /* Pods_UBar_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBar_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D64524641BDE47E700E19419 /* PubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubDetailViewController.swift; sourceTree = "<group>"; };
-		D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubsTableViewController.swift; sourceTree = "<group>"; };
 		D6953FEC1BDF7EDF00AC83D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoadingScreen.storyboard; sourceTree = "<group>"; };
 		D6D16A7B1BD67D360009B845 /* UBar-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UBar-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6D16A7E1BD67D360009B845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6D16A801BD67D360009B845 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		D6D16A831BD67D360009B845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6D16A851BD67D360009B845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6D16A881BD67D360009B845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6D16A8A1BD67D360009B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +52,12 @@
 		D6D16A9A1BD67D360009B845 /* UBar-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UBar-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D16A9E1BD67D360009B845 /* UBar_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBar_SwiftUITests.swift; sourceTree = "<group>"; };
 		D6D16AA01BD67D360009B845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6D83C131BD908C400F84A1B /* Pub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pub.swift; sourceTree = "<group>"; };
+		D6D312961BE3530E008EA10B /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
+		D6D312981BE35318008EA10B /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D6D3129A1BE3531F008EA10B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6D3129C1BE35329008EA10B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D6D3129E1BE35331008EA10B /* BarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarTableViewController.swift; sourceTree = "<group>"; };
+		D6D312A01BE35338008EA10B /* PubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubDetailViewController.swift; sourceTree = "<group>"; };
 		F5AC50D78B6060FE6B805A73 /* Pods-UBar-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBar-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBar-Swift/Pods-UBar-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,16 +129,16 @@
 		D6D16A7D1BD67D360009B845 /* UBar-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				D6D16A7E1BD67D360009B845 /* AppDelegate.swift */,
-				D6D16A801BD67D360009B845 /* LoadingViewController.swift */,
-				D6D16A821BD67D360009B845 /* Main.storyboard */,
-				D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */,
+				D6D312961BE3530E008EA10B /* BarViewController.swift */,
+				D6D312981BE35318008EA10B /* Theme.swift */,
+				D6D3129A1BE3531F008EA10B /* AppDelegate.swift */,
+				D6D3129E1BE35331008EA10B /* BarTableViewController.swift */,
+				D6D312A01BE35338008EA10B /* PubDetailViewController.swift */,
 				D6D16A851BD67D360009B845 /* Assets.xcassets */,
 				D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */,
+				D6D3129C1BE35329008EA10B /* Main.storyboard */,
+				D6953FEB1BDF7EDF00AC83D0 /* LoadingScreen.storyboard */,
 				D6D16A8A1BD67D360009B845 /* Info.plist */,
-				D6852F561BD7B62900ADE3A3 /* PubsTableViewController.swift */,
-				D6D83C131BD908C400F84A1B /* Pub.swift */,
-				D64524641BDE47E700E19419 /* PubDetailViewController.swift */,
 			);
 			path = "UBar-Swift";
 			sourceTree = "<group>";
@@ -226,6 +226,7 @@
 		D6D16A731BD67D360009B845 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bettina Hegedus";
 				TargetAttributes = {
@@ -270,7 +271,7 @@
 				D6D16A891BD67D360009B845 /* LaunchScreen.storyboard in Resources */,
 				D6953FED1BDF7EDF00AC83D0 /* LoadingScreen.storyboard in Resources */,
 				D6D16A861BD67D360009B845 /* Assets.xcassets in Resources */,
-				D6D16A841BD67D360009B845 /* Main.storyboard in Resources */,
+				D6D3129D1BE35329008EA10B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,11 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D16A811BD67D360009B845 /* LoadingViewController.swift in Sources */,
-				D64524651BDE47E700E19419 /* PubDetailViewController.swift in Sources */,
-				D6D83C141BD908C400F84A1B /* Pub.swift in Sources */,
-				D6852F571BD7B62900ADE3A3 /* PubsTableViewController.swift in Sources */,
-				D6D16A7F1BD67D360009B845 /* AppDelegate.swift in Sources */,
+				D6D3129B1BE3531F008EA10B /* AppDelegate.swift in Sources */,
+				D6D312A11BE35338008EA10B /* PubDetailViewController.swift in Sources */,
+				D6D312971BE3530E008EA10B /* BarViewController.swift in Sources */,
+				D6D312991BE35318008EA10B /* Theme.swift in Sources */,
+				D6D3129F1BE35331008EA10B /* BarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,14 +390,6 @@
 				D6953FEC1BDF7EDF00AC83D0 /* Base */,
 			);
 			name = LoadingScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D6D16A821BD67D360009B845 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6D16A831BD67D360009B845 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D6D16A871BD67D360009B845 /* LaunchScreen.storyboard */ = {
@@ -496,10 +489,12 @@
 			baseConfigurationReference = 0C5BB7932FA9DA3321E9A52B /* Pods-UBar-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "UBar-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingSans.UBar-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -508,6 +503,7 @@
 			baseConfigurationReference = F5AC50D78B6060FE6B805A73 /* Pods-UBar-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "UBar-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingSans.UBar-Swift";
