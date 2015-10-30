@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yj0-lf-SNr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yj0-lf-SNr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -198,6 +198,9 @@ Jöhetnek a sírkövesek
                                         <exclude reference="noY-AV-m60"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="pubListButtonTouched:" destination="s3l-6G-Esi" eventType="touchUpInside" id="TUl-yZ-PHr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

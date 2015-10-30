@@ -36,6 +36,21 @@ class MapChildViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pubListButtonTouched(sender: UIButton) {
+        
+        guard let pubsVC = storyboardViewController(storyboardName: "PubListScreens", storyboardID: "PubsTableViewController") else {
+            assert(true)
+            return
+        }
+        guard let navVC = RootNavigationController.sharedRootVC else {
+            assert(true)
+            return
+        }
+        
+        navVC.navigationBarHidden = false
+        navVC.pushViewController(pubsVC, animated: true)
+        
+    }
 
     /*
     // MARK: - Navigation

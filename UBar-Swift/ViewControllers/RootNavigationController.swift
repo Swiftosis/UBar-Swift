@@ -36,6 +36,9 @@ class RootNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+//        self.displayPubListScreen()
+        
         self.displayLoadingScreen()
 
 
@@ -100,5 +103,19 @@ class RootNavigationController: UINavigationController {
         self.navigationBarHidden = true
         
         self.setViewControllers( [loadingVC] , animated: aninated)
+    }
+    
+    
+    func displayPubListScreen() {
+        guard let pubsVC = storyboardViewController(storyboardName: "PubListScreens", storyboardID: "PubsTableViewController") else {
+            assert(true)
+            return
+        }
+        
+        self.navigationBarHidden = false
+        
+        self.setViewControllers([pubsVC], animated: true)
+        
+        
     }
 }
